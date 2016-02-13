@@ -1,35 +1,42 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Angular 2 with ASP.NET 5</title>
-    <!-- 1. Load libraries -->
 
-    <script src="libs/es6-shim.min.js"></script>
-    <script src="libs/system-polyfills.js"></script>
-    <script src="libs/angular2-polyfills.js"></script>
-    <script src="libs/system.js"></script>
-    <script src="libs/rx.js"></script>
-    <script src="libs/angular2.dev.js"></script>
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/bootswatch/yeti/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills (from CDN), in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+
+    <script src="libs/systemjs/dist/system-polyfills.js"></script>
+    <script src="libs/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="libs/systemjs/dist/system.js"></script>
+    <script src="libs/rxjs/bundles/Rx.js"></script>
+    <script src="libs/angular2/bundles/angular2.dev.js"></script>
+
     <!-- 2. Configure SystemJS -->
     <script>
-        System.config({
-            packages: {
-                appScripts: {
-                    defaultExtension: 'js'
+            System.config({
+                packages: {
+                    appScripts: {
+                        defaultExtension: 'js'
+                    }
                 }
-            }
-        });
-    </script>
-    <script>
-
-        System.import('appScripts/main.js')
-              .then(null, console.error.bind(console));
+            });
+            System.import('appScripts/main.js')
+                .then(null, console.error.bind(console));
     </script>
 
 </head>
+
 <body>
     <h1>Demo of Angular 2 using ASP.NET 5 with Visual Studio 2015</h1>
     <my-app>Loading...</my-app>
 </body>
+
 </html>

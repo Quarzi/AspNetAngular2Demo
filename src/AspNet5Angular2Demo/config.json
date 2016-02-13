@@ -1,0 +1,8 @@
+﻿{
+  "AppSettings": {
+    "SiteEmailAddress": "me@aol.com"
+  },
+  "Data": {
+    "WorldContextConnection": "server=(localdb)\\ProjectsV12;Database=angular2test;Trusted_Connection=true;MultipleActiveResultSets=true"
+  }
+}
